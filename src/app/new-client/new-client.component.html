@@ -1,0 +1,58 @@
+<div class="container-lg" style="max-width: 700px;">
+    <div class="d-grid card text-center">
+        <h3 class="fw-bolder mt-3 mb-0">Enter a New Client</h3>
+        <hr>
+        <p class="fst-italic mb-0">Please fill out this form to create a new client</p>
+        <hr>
+        <form class="mb-3 mx-5">
+
+            <div class="text-start">
+                <div class="mb-3">
+                    <label for="clientName" class="form-label">Client Name:</label>
+                    <input class="form-control" id="clientName" placeholder="Enter the client's name..."
+                        name="clientName" required />
+                </div>
+
+                <div class="mb-3">
+
+
+                    <label for="clientEmail" class="form-label">Client Email:</label>
+                    <input type="email" class="form-control" id="clientEmail" placeholder="Enter the client's email..."
+                        name="clientEmail" required>
+                </div>
+
+                <div class="mb-3">
+
+
+                    <label for="clientPhone" class="form-label">Client Phone Number:</label>
+                    <input type="tel" class="form-control" id="clientPhone" placeholder="Enter the client's phone number..."
+                        name="clientPhone" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="clientCompany" class="form-label">Client Company (Optional):</label>
+                    <input class="form-control" id="clienCompany" placeholder="Enter the client's company..."
+                        name="clientName" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="repId" class="form-label">Representative LDAP:</label>
+                    <input class="form-control" id="repId" placeholder="Enter your LDAP..." name="repId" required />
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <label for="additionalNotes" class="form-label">Additional Notes:</label>
+                    <textarea rows="5" class="form-control" id="additionalNotes"
+                        placeholder="Enter any additional notes here as necessary..." name="repId"></textarea>
+                </div>
+
+
+            </div>
+            <button type="button" class="btn btn-success">Register</button>
+
+        </form>
+
+    </div>
+</div>
