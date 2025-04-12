@@ -1,14 +1,28 @@
 <div class="container-lg">
     <section>
-        <form>
+        <!-- <form class="row"> -->
+            <div class="d-flex justify-content-between gap-1">
             <input class="form-control" type="text" placeholder="Search client by name, email, or phone..." />
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-success me-auto my-2" type="button">Search</button>
+            <button class="btn btn-success" type="button">Search</button>
+        </div>
+        
+            
+        
+
+       <div class="d-grid">
+            <button class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#newClient">Create New
+                Client</button>
+            </div>
+
+            <!-- <div class="d-flex justify-content-end"> -->
+                <!-- <button class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#newClient">Create New
+                    Client</button> -->
+                <!-- <button class="btn btn-success me-auto my-2" type="button">Search</button>
 
                 <button class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#newClient">Create New
-                    Client</button>
-            </div>
-        </form>
+                    Client</button> -->
+            <!-- </div> -->
+        <!-- </form> -->
     </section>
 
     <div class="modal fade" id="newClient" tabindex="-1" aria-labelledby="newClientModal" aria-hidden="true">
@@ -82,7 +96,7 @@
             <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 11%;">Company</div>
             <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 16%;">Email</div>
             <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 14%;">Phone Number</div>
-            <div class="text-light fs-6 fw-semibold text-decoration-underline text-center" style="width: 63%;">
+            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 63%;">
                 Additional Notes</div>
         </div>
 
@@ -110,3 +124,11 @@
         </div>
 
     </div>
+
+
+    
+      
+
+    
+    
+      
