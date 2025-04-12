@@ -16,25 +16,25 @@ export const routes: Routes = [
 
     {
         path: ``,
-        redirectTo: `/home`, pathMatch: `full`
+        redirectTo: `/home`, pathMatch: `full`,
     },
 
-{
-    path: `new`,
-    component: NewClientComponent,
-    title: `Register New Client`,
-},
+    {
+        path: `new`,
+        component: NewClientComponent,
+        title: `Register New Client`,
+    },
 
-{
-    path: `schMeeting`,
-    component: ScheduleMeetingComponent,
-    title: `Schedule Client Meeting`,
-},
+    {
+        path: `schMeeting`,
+        component: ScheduleMeetingComponent,
+        title: `Schedule Client Meeting`,
+    },
 
-{
-    path: `clients`,
-    component: ClientListComponent,
-    title: `Client List`,
-}
+    {
+        path: `clients`,
+        component: ClientListComponent,
+        title: `Client List`,
+    }
 
 ];

@@ -1,5 +1,154 @@
 <div class="container-lg">
-<div class="card">
-<p>client-list works!</p>
-</div>
+    <section>
+        <form>
+          <input class="form-control" type="text" placeholder="Search client by name, email, or phone..." />
+          <div class="d-flex justify-content-end">
+          <button class="btn btn-success me-auto my-2" type="button">Search</button>
+          
+            <button class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#newClient">Create New
+                Client</button>
+            </div>
+        </form>
+      </section>
+
+<!-- <div class="d-flex justify-content-end">
+        <button class="btn btn-success m-2" data-bs-toggle="modal" data-bs-target="#newClient">Create New
+            Client</button>
+        </div> -->
+
+        <div class="modal fade" id="newClient" tabindex="-1" aria-labelledby="newClientModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="fw-bolder mt-3 mb-0">Register a New Client</h3><br>
+
+
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p class="fst-italic mb-0">Please fill out this form to create a new client</p>
+                        <hr>
+
+                        <form>
+
+                            <div class="text-start">
+                                <div class="mb-3">
+                                    <label for="clientName" class="form-label">Client Name:</label>
+                                    <input [(ngModel)]="client.name" class="form-control" id="clientName" placeholder="Enter the client's name..."
+                                        name="clientName" required />
+                                </div>
+
+                                <div class="mb-3">
+
+
+                                    <label for="clientEmail" class="form-label">Client Email:</label>
+                                    <input [(ngModel)]="client.email" type="email" class="form-control" id="clientEmail"
+                                        placeholder="Enter the client's email..." name="clientEmail" required>
+                                </div>
+
+                                <div class="mb-3">
+
+
+                                    <label for="clientPhone" class="form-label">Client Phone Number:</label>
+                                    <input [(ngModel)]="client.phone" type="tel" class="form-control" id="clientPhone"
+                                        placeholder="Enter the client's phone number..." name="clientPhone">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="clientCompany" class="form-label">Client Company (Optional):</label>
+                                    <input [(ngModel)]="client.company" class="form-control" id="clienCompany"
+                                        placeholder="Enter the client's company..." name="clientName" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="repId" class="form-label">Representative LDAP:</label>
+                                    <input [(ngModel)]="client.rep" class="form-control" id="repId" placeholder="Enter your LDAP..." name="repId"
+                                        required />
+                                </div>
+
+                                <hr>
+
+                                <div class="mb-3">
+                                    <label for="additionalNotes" class="form-label">Additional Notes:</label>
+                                    <textarea rows="5" class="form-control" id="additionalNotes"
+                                        placeholder="Enter any additional notes here as necessary..."
+                                        name="repId" [(ngModel)]="client.notes"></textarea>
+                                </div>
+
+
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" (click)="addClient()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+<div class="container-lg">
+        <div class="d-flex text-start my-2">
+           <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 14%;">Client Name</div>
+           <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 11%;">Company</div>
+           <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 16%;">Email</div>
+           <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 14%;">Phone Number</div>
+           <div class="text-light fs-6 fw-semibold text-decoration-underline text-center" style="width: 63%;">Additional Notes</div>
+        </div>
+
+    <ul class="list-group row">
+        <li class="list-group-item d-flex align-items-center" *ngFor="let clients of clientList">
+            <div style="width: 15%;">{{clients.name}}</div>
+            <div style="width: 11%;">{{clients.company}}</div>
+            <div style="width: 17%;">{{clients.email}}</div>
+            <div style="width: 14%;">{{clients.phone}}</div>
+            <div style="width: 63%;">{{clients.notes}}</div>
+        
+            <button class="trash-btn btn btn-outline-secondary btn-sm  ms-2" (click)="deleteClient(clients)">
+                <i class="bi bi-trash3"></i>
+            </button>
+
+        </li>
+        
+    </ul>
+
+    <div class="card text-center" *ngIf="clientList.length === 0">
+        <p class="fw-semibold fs-5 mt-2"><i class="bi bi-emoji-frown"></i> No Clients <i class="bi bi-emoji-frown"></i></p>
+        <p class="fs-6 text-body-secondary">Go network and acquire some leads!</p>
+        <i class="bi bi-graph-up-arrow fs-1"></i>
+    </div>
+
+    
+    
+
+    
+
+
+    <!-- <div class="row mt-3">
+        <div class="col mb-2 d-flex justify-content-evenly" *ngFor="let client of clientList">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{client.name}}</h5>
+                <p>{{client.email}}</p>
+                <p>{{client.phone}}</p>
+                <p>{{client.company}}</p>
+                <p>{{client.rep}}</p>
+                <button class="btn btn-success">Details</button>
+                <button class="btn btn-success ms-2">Schedule Meeting</button>
+            </div>
+            </div>
+        </div>
+    </div> -->
+
+
 </div>
