@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { NewClientComponent } from './new-client/new-client.component';
-
 import { ScheduleMeetingComponent } from './schedule-meeting/schedule-meeting.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import { AppComponent } from './app.component';
@@ -19,11 +17,11 @@ export const routes: Routes = [
         redirectTo: `/home`, pathMatch: `full`,
     },
 
-    {
-        path: `new`,
-        component: NewClientComponent,
-        title: `Register New Client`,
-    },
+    // {
+    //     path: `new`,
+    //     component: NewClientComponent,
+    //     title: `Register New Client`,
+    // },
 
     {
         path: `schMeeting`,

@@ -1,20 +1,16 @@
-<div class="container-lg">
+<div class="container-lg px-0">
     <section>
-       
-            <div class="d-flex justify-content-between gap-1">
+
+        <div class="d-flex justify-content-between gap-1">
             <input class="form-control" type="text" placeholder="Search client by name, email, or phone..." />
             <button class="btn btn-success" type="button">Search</button>
         </div>
-        
-            
-        
 
-       <div class="d-grid">
+        <div class="d-grid">
             <button class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#newClient">Create New
                 Client</button>
-            </div>
+        </div>
 
-           
     </section>
 
     <div class="modal fade" id="newClient" tabindex="-1" aria-labelledby="newClientModal" aria-hidden="true">
@@ -77,24 +73,20 @@
         </div>
     </div>
 
+        <ul class="list-group mb-1">
+            <li class="list-group-item list-group-item-secondary d-flex pb-1">
+                <div class="fw-semibold fs-6 text-decoration-underline" style="width: 14%;">Name</div>
+                <div class="fw-semibold fs-6 text-decoration-underline" style="width: 11%;">Company</div>
+                <div class="fw-semibold fs-6 text-decoration-underline" style="width: 16%;">Email</div>
+                <div class="fw-semibold fs-6 text-decoration-underline" style="width: 14%;">Phone Number</div>
+                <div class="fw-semibold fs-6 text-decoration-underline" style="width: 63%;">Additional Notes</div>
+            </li>
+        </ul>
+    
 
-
-
-
-    <div class="container-lg">
-
-        <div class="d-flex text-start my-2">
-            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 14%;">Client Name</div>
-            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 11%;">Company</div>
-            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 16%;">Email</div>
-            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 14%;">Phone Number</div>
-            <div class="text-light fs-6 fw-semibold text-decoration-underline" style="width: 63%;">
-                Additional Notes</div>
-        </div>
-
-        <ul class="list-group row">
+        <ul class="list-group">
             <li class="list-group-item d-flex align-items-center" *ngFor="let clients of clientList">
-                <div style="width: 15%;">{{clients.name}}</div>
+                <div style="width: 15%;"><a href="">{{clients.name}}</a></div>
                 <div style="width: 11%;">{{clients.company}}</div>
                 <div style="width: 17%;">{{clients.email}}</div>
                 <div style="width: 14%;">{{clients.phone}}</div>
@@ -107,6 +99,7 @@
             </li>
 
         </ul>
+    
 
         <div class="card text-center" *ngIf="clientList.length === 0">
             <p class="fw-semibold fs-5 mt-2"><i class="bi bi-emoji-frown"></i> No Clients <i
@@ -115,12 +108,5 @@
             <i class="bi bi-graph-up-arrow fs-1"></i>
         </div>
 
+
     </div>
-
-
-    
-      
-
-    
-    
-      
