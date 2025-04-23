@@ -1,11 +1,6 @@
 <div class="container-lg px-0">
     <section>
 
-        <div class="d-flex justify-content-between gap-1">
-            <input class="form-control" type="text" placeholder="Search client by name, email, or phone..." />
-            <button class="btn btn-success" type="button">Search</button>
-        </div>
-
         <div class="d-grid">
             <button class="btn btn-success my-3" data-bs-toggle="modal" data-bs-target="#newClient">Create New
                 Client</button>
@@ -86,7 +81,7 @@
 
         <ul class="list-group">
             <li class="list-group-item d-flex align-items-center" *ngFor="let clients of clientList">
-                <div style="width: 15%;"><a href="">{{clients.name}}</a></div>
+                <div style="width: 15%;">{{clients.name}}</div>
                 <div style="width: 11%;">{{clients.company}}</div>
                 <div style="width: 17%;">{{clients.email}}</div>
                 <div style="width: 14%;">{{clients.phone}}</div>
