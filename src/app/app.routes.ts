@@ -17,12 +17,6 @@ export const routes: Routes = [
         redirectTo: `/home`, pathMatch: `full`,
     },
 
-    // {
-    //     path: `new`,
-    //     component: NewClientComponent,
-    //     title: `Register New Client`,
-    // },
-
     {
         path: `schMeeting`,
         component: ScheduleMeetingComponent,
